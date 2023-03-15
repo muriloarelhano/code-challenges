@@ -6,14 +6,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
  
-        while (true) {
+        while (sc.hasNext()) {
             int i = sc.nextInt();
-            if (i <= 0 && i >= 1000000)
-                break;
-
             int j = sc.nextInt();
-            if (i <= 0 && j >= 1000000)
-                break;
 
             int interval[] = IntStream.rangeClosed(i, j).toArray();
 
