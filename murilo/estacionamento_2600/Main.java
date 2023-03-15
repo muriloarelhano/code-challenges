@@ -10,13 +10,12 @@ public class Main {
             int placa = sc.nextInt();
 
             if (acao == 1) {
-                if(estacionamento.size() == 10) {
-                    System.out.println("Nao ha vaga no estacionamento"); 
+                if (estacionamento.size() == 10) {
+                    System.out.println("Nao ha vaga no estacionamento");
                     continue;
                 }
                 estacionamento.add(placa);
                 System.out.println("Carro estacionado");
-                
 
             }
 
@@ -25,11 +24,10 @@ public class Main {
                 if (posicaoCarro < 0) {
                     System.out.println("Carro nao encontrado");
                 } else {
-                     
-                     
-                        System.out.println(String.format("Carro liberado apos %d movimentos", posicaoCarro));
-                        estacionamento.remove(posicaoCarro);
-                     
+
+                    System.out.println(String.format("Carro liberado apos %d movimentos", posicaoCarro));
+                    estacionamento.remove(posicaoCarro);
+
                 }
             }
 

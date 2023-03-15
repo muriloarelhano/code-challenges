@@ -4,4 +4,4 @@
 # Obs
 
 Ler input em formato de arquivo e passar para o programa
-> Get-Content .\inputs.txt | java .\Main.java
+> Get-Content .\input.txt | java .\Main.java
