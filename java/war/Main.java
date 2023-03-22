@@ -6,8 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while (sc.hasNext()) {
-            ArrayList<Integer> playerA = getLineCards(sc);
-            ArrayList<Integer> playerB = getLineCards(sc);
+            ArrayList<Integer> playerA = getMineLine(sc);
+            ArrayList<Integer> playerB = getMineLine(sc);
 
             System.out.println(playerA);
             System.out.println(playerB);
