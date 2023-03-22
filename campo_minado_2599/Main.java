@@ -21,7 +21,8 @@ public class Main {
 
             System.out.println("Campo #" + minesCount + ":");
             minefield.print();
-
+            System.out.println("");
+            
         }
 
     }
