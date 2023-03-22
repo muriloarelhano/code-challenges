@@ -22,9 +22,14 @@ O campo, também de dimensões 4 × 4 mostrado abaixo, inclui as minas e o núme
 
 Seu objetivo é escrever um programa que, dado um campo ativado, desative-o. Ou seja, determine o seu respectivo campo desativado.
 Entrada
-A entrada contém um número arbitrário de campos ativados. A primeira linha de cada campo contém dois inteiros n e m (0 < n, m ≤ 100) representando, respectivamente, o número de linhas e colunas daquele campo. Cada uma das n linhas seguintes contém exatamente m caracteres, representando o campo. Posições seguras encontram-se representadas por “.” (ponto) enquanto que posições minadas encontram-se representadas por “*” (asterisco). O final da entrada é indicado por n = 0 e m = 0, e não deve ser processada.
+A entrada contém um número arbitrário de campos ativados. 
+A primeira linha de cada campo contém dois inteiros n e m (0 < n, m ≤ 100) representando,
+respectivamente, o número de linhas e colunas daquele campo. Cada uma das n linhas seguintes contém exatamente m caracteres, representando o campo. Posições seguras encontram-se representadas por “.” (ponto) enquanto que posições minadas encontram-se representadas por “*” (asterisco). O final da entrada é indicado por n = 0 e m = 0, e não deve ser processada.
 Saída
-Para cada um dos casos de teste, seu programa deve imprimir, em uma única linha, a mensagem "Campo #x:  ", onde x corresponde ao número do campo (começando de 1). As próximas n linhas contêm o campo desativado. Ou seja, o campo com os pontos substituı́dos pelo número de minas adjacentes àquela posição. As saı́das para dois campos consecutivos devem estar separadas por uma linha em branco.
+Para cada um dos casos de teste, seu programa deve imprimir, 
+em uma única linha, a mensagem "Campo #x:  ", onde x corresponde ao número do campo (começando de 1). 
+As próximas n linhas contêm o campo desativado. Ou seja, o campo com os pontos substituı́dos pelo número de minas adjacentes àquela posição. 
+As saı́das para dois campos consecutivos devem estar separadas por uma linha em branco.
 
 OUTPUT:
 Campo #1:
