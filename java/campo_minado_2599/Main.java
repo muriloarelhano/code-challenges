@@ -8,6 +8,7 @@ public class Main {
         while (sc.hasNextLine()) {
             int m = sc.nextInt();
             int n = sc.nextInt();
+            sc.nextLine();
 
             if (m == 0 && n == 0)
                 break;
@@ -24,9 +25,8 @@ public class Main {
     }
 
     public static char[][] populateMatrix(char[][] minefield, Scanner sc) {
-        for (int line = 0; line < minefield.length - 1; line++) {
+        for (int line = 0; line < minefield.length; line++) {
             char[] lineInput = sc.nextLine().toCharArray();
-            System.out.println(lineInput );
             minefield[line] = lineInput;
         }
         return minefield;
@@ -34,12 +34,8 @@ public class Main {
 
     public static void printMatrix(char[][] minefield) {
 
-        for (int line = 0; line < minefield.length - 1; line++) {
-
-            for (int column = 0; column < minefield[line].length - 1; column++) {
-                System.out.println(minefield[line]);
-            }
-
+        for (int line = 0; line < minefield.length; line++) {
+            System.out.println(minefield[line]);
         }
     }
 }

@@ -1,0 +1,39 @@
+Campo Minado é um jogo que vem junto com um dos Sistemas Operacionais mais conhecidos do mundo e consiste,
+basicamente, em localizar todas as minas em um campo de dimensões M × N.
+Durante o jogo, a cada clique do mouse em uma posição do campo,
+uma bomba ou um número é mostrado naquela posição.
+Uma bomba indica que aquela posição está minada (e você perde o jogo).
+Um número indica que aquela posição não está minada e a quantidade de minas adjacentes àquela posição
+(e você prossegue no jogo). Cada posição possui, no máximo, oito posições adjacentes a ela.
+O campo de dimensões 4 × 4 mostrado abaixo possui duas minas, cada uma delas representada por um “*” 
+(asterisco), e vários “.” (pontos). Chamamos esse campo de campo ativado.
+
+* . . .
+ . . . .
+ . * . .
+ . . . .
+
+O campo, também de dimensões 4 × 4 mostrado abaixo, inclui as minas e o número de minas adjacentes a cada posição do campo dado acima. Chamamos esse campo de campo desativado.
+
+ * 1 0 0
+ 2 2 1 0
+ 1 * 1 0
+ 1 1 1 0
+
+Seu objetivo é escrever um programa que, dado um campo ativado, desative-o. Ou seja, determine o seu respectivo campo desativado.
+Entrada
+A entrada contém um número arbitrário de campos ativados. A primeira linha de cada campo contém dois inteiros n e m (0 < n, m ≤ 100) representando, respectivamente, o número de linhas e colunas daquele campo. Cada uma das n linhas seguintes contém exatamente m caracteres, representando o campo. Posições seguras encontram-se representadas por “.” (ponto) enquanto que posições minadas encontram-se representadas por “*” (asterisco). O final da entrada é indicado por n = 0 e m = 0, e não deve ser processada.
+Saída
+Para cada um dos casos de teste, seu programa deve imprimir, em uma única linha, a mensagem "Campo #x:  ", onde x corresponde ao número do campo (começando de 1). As próximas n linhas contêm o campo desativado. Ou seja, o campo com os pontos substituı́dos pelo número de minas adjacentes àquela posição. As saı́das para dois campos consecutivos devem estar separadas por uma linha em branco.
+
+OUTPUT:
+Campo #1:
+*100
+2210
+1*10
+1110
+
+Campo #2:
+**100
+33200
+1*100
