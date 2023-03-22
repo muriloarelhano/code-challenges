@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -50,13 +51,14 @@ class MineField {
     private void verifyCells() {
         for (int line = 0; line < minefield.length; line++) {
             for (int col = 0; col < minefield[line].length; col++) {
-                this.minefield[line][col] = this.countMinesInAdjacencies(line, col);
+                if (!validateMine(line, col))
+                    this.minefield[line][col] = this.countMinesInAdjacencies(line, col);
             }
         }
     }
 
     public void print() {
-
+        System.out.println("Printing result...");
         for (int line = 0; line < minefield.length; line++) {
             System.out.println(minefield[line]);
         }
@@ -82,11 +84,11 @@ class MineField {
         if (validateCell(row + 1, col - 1)) // canto esquerdo superior
             minesInAdjacencies++;
 
-        return (char)(minesInAdjacencies + '0');
+        return (char) (Character.forDigit(minesInAdjacencies, 10));
     }
 
     public boolean validateCell(int row, int col) {
-        if ((row <= this.rowCount && row > 0) && (col <= this.collCount && col > 0)) {
+        if ((row < this.rowCount && row > 0) && (col < this.collCount && col > 0)) {
 
             return validateMine(row, col);
 
@@ -97,9 +99,14 @@ class MineField {
     }
 
     private boolean validateMine(int row, int col) {
+        System.out.print("Row: " + row + " | Col: " + col + " | Value: " + this.minefield[row][col]);
         if (this.minefield[row][col] == '*') {
+            System.out.print(" isMine ");
+            System.out.println("");
             return true;
         } else {
+
+            System.out.println("");
             return false;
         }
     }
