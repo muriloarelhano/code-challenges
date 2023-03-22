@@ -6,7 +6,10 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        int minesCount = 0;
+
         while (sc.hasNextLine()) {
+            minesCount++;
             int rows = sc.nextInt();
             int columns = sc.nextInt();
             sc.nextLine();
@@ -16,6 +19,7 @@ public class Main {
 
             MineField minefield = new MineField(rows, columns, sc);
 
+            System.out.println("Campo #" + minesCount + ":");
             minefield.print();
 
         }
@@ -58,7 +62,6 @@ class MineField {
     }
 
     public void print() {
-        System.out.println("Printing result...");
         for (int line = 0; line < minefield.length; line++) {
             System.out.println(minefield[line]);
         }
