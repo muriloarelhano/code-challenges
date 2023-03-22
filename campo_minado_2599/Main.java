@@ -69,18 +69,25 @@ class MineField {
 
         if (validateCell(row - 1, col)) // encima
             minesInAdjacencies++;
+
         if (validateCell(row, col - 1)) // esquerda
             minesInAdjacencies++;
+
         if (validateCell(row + 1, col)) // embaixo
             minesInAdjacencies++;
+
         if (validateCell(row, col + 1))// direita
             minesInAdjacencies++;
+
         if (validateCell(row - 1, col + 1)) // canto direito inferior
             minesInAdjacencies++;
+
         if (validateCell(row - 1, col - 1)) // canto esquerdo inferior
             minesInAdjacencies++;
+
         if (validateCell(row + 1, col + 1)) // canto direito superior
             minesInAdjacencies++;
+
         if (validateCell(row + 1, col - 1)) // canto esquerdo superior
             minesInAdjacencies++;
 
@@ -88,7 +95,7 @@ class MineField {
     }
 
     public boolean validateCell(int row, int col) {
-        if ((row < this.rowCount && row > 0) && (col < this.collCount && col > 0)) {
+        if ((row < this.rowCount && row >= 0) && (col < this.collCount && col >= 0)) {
 
             return validateMine(row, col);
 
