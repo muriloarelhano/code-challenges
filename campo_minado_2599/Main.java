@@ -99,14 +99,10 @@ class MineField {
     }
 
     private boolean validateMine(int row, int col) {
-        System.out.print("Row: " + row + " | Col: " + col + " | Value: " + this.minefield[row][col]);
+
         if (this.minefield[row][col] == '*') {
-            System.out.print(" isMine ");
-            System.out.println("");
             return true;
         } else {
-
-            System.out.println("");
             return false;
         }
     }
