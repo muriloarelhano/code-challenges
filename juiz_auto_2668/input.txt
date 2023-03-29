@@ -12,7 +12,7 @@ The answer is: 10
 The answer is: 15
 2
 The answer is: 10
-The answer is: 5
+The answer is:  5
 2
 The answer is: 10
 The answer is: 5
@@ -32,4 +32,8 @@ Input set #2: NO
 The judges are mean!
 1
 The judges are good!
+1
+
+1
+
 0

@@ -13,38 +13,67 @@ public class Main {
             runNum++;
 
             int n = sc.nextInt();
+            sc.nextLine();
 
             if (n == 0)
                 break;
 
-            System.out.println("Run #" + runNum + ": ");
+            System.out.print("Run #" + runNum + ": ");
 
-            ArrayList<String> input = new ArrayList<String>();
+            ArrayList<String> inputs = new ArrayList<String>();
 
-            for (int i = 0; i <= n; i++) {
-                input.add(sc.nextLine());
+            for (int i = 0; i < n; i++) {
+                inputs.add(sc.nextLine());
             }
 
             int m = sc.nextInt();
+            sc.nextLine();
 
             ArrayList<String> answers = new ArrayList<String>();
 
-            for (int i = 0; i <= m; i++) {
+            for (int i = 0; i < m; i++) {
                 answers.add(sc.nextLine());
+            }
+
+            try {
+                compareAnswers(inputs, answers);
+            } catch (Exception e) {
+                // TODO: handle exception
             }
         }
 
     }
 
     public static void compareAnswers(ArrayList<String> inputs, ArrayList<String> answers) {
+        String result = "";
         for (int i = 0; i < inputs.size(); i++) {
+            // Caso a resposta seja exatamente igual
             if (inputs.get(i).equals(answers.get(i))) {
-                System.out.println("Accepted");
-            } else {
-                String str = "qwerty1qwerty2";
-                str = str.replaceAll("[^0-9]+", " ");
+                result = "Accepted";
+                continue;
             }
+
+            // Caso não seja exatamente igual
+            String inputStr = inputs.get(i).replaceAll("[^0-9]+", "");
+            String answerStr = answers.get(i).replaceAll("[^0-9]+", "");
+
+            if (inputStr.length() > 0 && answerStr.length() > 0) {
+                int inputNums = Integer.parseInt(inputStr);
+                int answerNums = Integer.parseInt(answerStr);
+
+                if (inputs.get(i).equals(answers.get(i)) == false && inputNums == answerNums) {
+                    result = "Presentation Error";
+                    continue;
+                }
+            } else {
+                result = "Presentation Error";
+                continue;
+            }
+
+            result = "Wrong Answer";
         }
+
+        System.out.println(result);
     }
 
 }
