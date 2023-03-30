@@ -35,11 +35,9 @@ public class Main {
                 answers.add(sc.nextLine());
             }
 
-            try {
-                compareAnswers(inputs, answers);
-            } catch (Exception e) {
-                // TODO: handle exception
-            }
+        
+            compareAnswers(inputs, answers);
+
         }
 
     }
