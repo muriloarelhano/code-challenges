@@ -18,8 +18,6 @@ public class Main {
             if (n == 0)
                 break;
 
-            System.out.print("Run #" + runNum + ": ");
-
             ArrayList<String> inputs = new ArrayList<String>();
 
             for (int i = 0; i < n; i++) {
@@ -27,6 +25,8 @@ public class Main {
             }
 
             int m = sc.nextInt();
+            if (m == 0)
+                break;
             sc.nextLine();
 
             ArrayList<String> answers = new ArrayList<String>();
@@ -34,6 +34,8 @@ public class Main {
             for (int i = 0; i < m; i++) {
                 answers.add(sc.nextLine());
             }
+
+            System.out.print("Run #" + runNum + ": ");
 
             compareAnswers(inputs, answers);
 
