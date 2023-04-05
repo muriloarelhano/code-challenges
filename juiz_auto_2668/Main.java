@@ -35,7 +35,6 @@ public class Main {
                 answers.add(sc.nextLine());
             }
 
-        
             compareAnswers(inputs, answers);
 
         }
@@ -44,30 +43,35 @@ public class Main {
 
     public static void compareAnswers(ArrayList<String> inputs, ArrayList<String> answers) {
         String result = "";
-        for (int i = 0; i < inputs.size(); i++) {
-            // Caso a resposta seja exatamente igual
-            if (inputs.get(i).equals(answers.get(i))) {
-                result = "Accepted";
-                continue;
-            }
+        try {
+            for (int i = 0; i < inputs.size(); i++) {
+                // Caso a resposta seja exatamente igual
+                if (inputs.get(i).equals(answers.get(i))) {
+                    result = "Accepted";
+                    continue;
+                }
 
-            // Caso não seja exatamente igual
-            String inputStr = inputs.get(i).replaceAll("[^0-9]+", "");
-            String answerStr = answers.get(i).replaceAll("[^0-9]+", "");
+                // Caso não seja exatamente igual
+                String inputStr = inputs.get(i).replaceAll("[^0-9]+", "");
+                String answerStr = answers.get(i).replaceAll("[^0-9]+", "");
 
-            if (inputStr.length() > 0 && answerStr.length() > 0) {
-                int inputNums = Integer.parseInt(inputStr);
-                int answerNums = Integer.parseInt(answerStr);
+                if (inputStr.length() > 0 && answerStr.length() > 0) {
+                    int inputNums = Integer.parseInt(inputStr);
+                    int answerNums = Integer.parseInt(answerStr);
 
-                if (inputs.get(i).equals(answers.get(i)) == false && inputNums == answerNums) {
+                    if (inputs.get(i).equals(answers.get(i)) == false && inputNums == answerNums) {
+                        result = "Presentation Error";
+                        continue;
+                    }
+                } else {
                     result = "Presentation Error";
                     continue;
                 }
-            } else {
-                result = "Presentation Error";
-                continue;
+
+                result = "Wrong Answer";
             }
 
+        } catch (Exception e) {
             result = "Wrong Answer";
         }
 
