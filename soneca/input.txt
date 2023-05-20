@@ -1,0 +1,21 @@
+4
+10:00 12:00 Aula
+12:00 13:00 Almoco, como sempre.
+13:00 15:00 Leitura de artigos entediantes
+15:30 17:45 Correcao de provas
+4
+10:00 12:00 Aula
+12:00 13:00 Almoco, apenas almoco.
+13:00 15:00 Leitura de artigos entediantes mais uma vez
+16:45 17:45 Mais aulas
+4
+10:00 12:00 Elaboracao de trabalho
+12:00 13:00 Almoco novamente.
+13:00 15:00 Orientacao de alunos
+15:30 17:15 Correcao de listas de exercicios
+1
+12:00 13:00 Eu adoro almocar...voce notou isso? :)
+3
+12:00 13:00 Eu adoro almocar...voce notou isso? :)
+13:00 18:00 asdasdsro almocar...voce notou isso? :)
+18:00 18:00 asdasdsro almocar...voce notou isso? :)
