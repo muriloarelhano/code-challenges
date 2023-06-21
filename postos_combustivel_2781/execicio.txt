@@ -1,14 +1,15 @@
-Escreva um programa em python que resolva o seguinte problema, utilizando técnicas de backtraking.
 O código deve estar em inglês.
+Utilize técnicas de backtracking.
+Escreva um programa em python que resolva o seguinte problema.
 
 Descrição:
 Você será o futuro governador de um estado brasileiro bastante promissor, ainda em formação. Como qualquer estado do Brasil, o seu é formado por várias cidades, e essas cidades são formadas por quadras e ruas. No momento, você precisa autorizar a instalação dos futuros postos de combustíveis nas cidades do seu estado. Você quer autorizar a construção do maior número de postos possíveis, mas está sujeito às seguintes restrições: todos os postos devem ser instalados nas esquinas das cidades e dois postos nunca devem ser colocados em esquinas adjacentes. Duas esquina são adjacentes se elas estão na mesma quadra e existe uma rua (e somente uma rua) ligando-as.
 Seu objetivo aqui é escrever um programa que, dados o número de cidades do seu estado, o número de esquinas e a lista das esquinas adjacentes de cada cidade, devolve o maior número de postos que podem ser instalados em cada cidade.
 
-Entrada
+Entrada:
 A entrada inicia-se com um inteiro positivo n, que indica a quantidade de casos de teste (número de cidades de sua região). Cada caso de teste consiste de um par de inteiros não negativos j e k que determinam, respectivamente, a quantidade de esquinas e o número de esquinas adjacentes do teste corrente. As esquinas são numeradas de 1 a j. Os k pares de inteiros seguintes indicam as esquinas adjacentes.
 
-Saída
+Saída:
 Para o caso de teste em questão, seu programa deve imprimir um inteiro positivo que indica o maior número de postos que podem ser instalados em cada cidade, na ordem em que elas aparecem na entrada.
 
 exemplo de input:
