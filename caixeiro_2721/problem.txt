@@ -1,8 +1,8 @@
 escreva um código em python (em inglês) que resolva o seguinte problema:
 
 Antes do surgimento da Internet e da possibilidade de se fazer compras online, as empresas vendiam os seus produtos através de profissionais conhecidos como caixeiros viajantes (ou mascates). Esses profissionais tinham a função de visitar várias cidades pré-selecionadas apresentando e vendendo os produtos da empresa que o contratara.
-Para um caixeiro viajante, difı́cil não era fazer a venda, mas sim encontrar a melhor forma de visitar as cidades escolhidas. Mais especificamente, dado um mapa com as cidades que ele deveria visitar juntamente com as estradas (de mão dupla) que as  ligam, o caixeiro precisava saber se existe uma forma de, partindo de uma cidade de origem, visitar todas as outras cidades uma, e somente uma, vez e voltar para a cidade de origem.
-Seu objetivo aqui é ajudar um caixeiro viajante nessa difı́cil tarefa. Mais especificamente, você precisa escrever um programa que, dado um conjunto de cidades e as rodovias que ligam cada uma delas, determine se existe ou não uma forma de visitar todas as cidades uma, e somente uma, vez e voltar à cidade de origem.
+Para um caixeiro viajante, difícil não era fazer a venda, mas sim encontrar a melhor forma de visitar as cidades escolhidas. Mais especificamente, dado um mapa com as cidades que ele deveria visitar juntamente com as estradas (de mão dupla) que as  ligam, o caixeiro precisava saber se existe uma forma de, partindo de uma cidade de origem, visitar todas as outras cidades uma, e somente uma, vez e voltar para a cidade de origem.
+Seu objetivo aqui é ajudar um caixeiro viajante nessa difícil tarefa. Mais especificamente, você precisa escrever um programa que, dado um conjunto de cidades e as rodovias que ligam cada uma delas, determine se existe ou não uma forma de visitar todas as cidades uma, e somente uma, vez e voltar à cidade de origem.
 
 Entrada
 A entrada inicia-se com um inteiro positivo n, que indica a quantidade de casos de teste. A primeira linha de cada caso de teste consiste de uma tripla de inteiros positivos j, k e l (com 3 ≤ j ≤ 10 e 1 ≤ l ≤ j) que determinam, respectivamente, a quantidade de cidades, o número de rodovias existentes e a cidade de origem. As k linhas seguintes do caso de teste indicam as rodovias. Assumindo que as cidades são numeradas de 1 a j, uma rodovia é indicada por um par de inteiros positivos que correspondem às cidades ligadas por ela.
@@ -10,8 +10,7 @@ A entrada inicia-se com um inteiro positivo n, que indica a quantidade de casos 
 Saída
 Para o caso de teste em questão, seu programa deve imprimir EH POSSIVEL caso seja possı́vel, partindo da cidade de origem, visitar todas as cidades uma (e somente uma) vez e voltar à cidade inicial, ou NAO EH POSSIVEL, caso isso não seja possı́vel.
 
-
-Samples Input	
+Exemplo de entrada pelo terminal:
 3
 3 3 1
 1 2
@@ -32,7 +31,8 @@ Samples Input
 3 4
 3 5
 4 5
-Samples Output
+
+Exemplo de saida:
 EH POSSIVEL
 NAO EH POSSIVEL
 EH POSSIVEL
