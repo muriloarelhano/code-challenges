@@ -1,34 +1,36 @@
-def is_possible(j, k, l, roads):
-    visited = [False] * j  # Mark all cities as unvisited
-    stack = [l-1]  # Start with the initial city
-    visited[l-1] = True  # Mark the initial city as visited
-
-    while stack:
-        city = stack.pop()
-        for road in roads:
-            if road[0] == city+1 and not visited[road[1]-1]:
-                stack.append(road[1]-1)
-                visited[road[1]-1] = True
-            elif road[1] == city+1 and not visited[road[0]-1]:
-                stack.append(road[0]-1)
-                visited[road[0]-1] = True
-
-    return all(visited)  # Check if all cities were visited
+def dfs(graph, start, visited):
+    visited[start] = True
+    for neighbor in graph[start]:
+        if not visited[neighbor]:
+            dfs(graph, neighbor, visited)
 
 
-# Read the number of test cases
-num_cases = int(input())
+def is_possible(num_cities, num_roads, origin, roads):
+    graph = [[] for _ in range(num_cities + 1)]
+    for road in roads:
+        city1, city2 = road
+        graph[city1].append(city2)
+        graph[city2].append(city1)
 
-for _ in range(num_cases):
-    # Read the input for each test case
-    j, k, l = map(int, input().split())
+    visited = [False] * (num_cities + 1)
+    dfs(graph, origin, visited)
+
+    for i in range(1, num_cities + 1):
+        if not visited[i]:
+            return "NAO EH POSSIVEL"
+
+    return "EH POSSIVEL"
+
+
+num_test_cases = int(input())
+
+for _ in range(num_test_cases):
+
+    num_cities, num_roads, origin = map(int, input().split())
     roads = []
-    for _ in range(k):
+    for _ in range(num_roads):
         road = tuple(map(int, input().split()))
         roads.append(road)
 
-    # Check if it is possible to visit all cities and return to the initial city
-    if is_possible(j, k, l, roads):
-        print("EH POSSIVEL")
-    else:
-        print("NAO EH POSSIVEL")
+    result = is_possible(num_cities, num_roads, origin, roads)
+    print(result)
